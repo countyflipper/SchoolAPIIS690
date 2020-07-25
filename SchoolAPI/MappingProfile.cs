@@ -38,6 +38,13 @@ namespace SchoolAPI
             CreateMap<SectionAssignForCreationDTO, SectionAssign>();
             CreateMap<SectionAssignForUpdateDTO, SectionAssign>();
             //-----------------------------------------------------------------
+
+            CreateMap<CourseSection, CourseSectionDto>();
+
+            CreateMap<CourseSectionForCreationDto, CourseSection>();
+            CreateMap<CourseSectionUpdateForDto, CourseSection>();
+
+            //-----------------------------------------------------------------
         }
     }
 }
