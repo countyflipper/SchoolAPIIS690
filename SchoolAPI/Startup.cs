@@ -12,6 +12,7 @@ using SchoolAPI.Extensions;
 using System.IO;
 using SchoolAPI.ActionFilters;
 using Repository.DataShaping;
+using SchoolAPI.Utility;
 
 namespace SchoolAPI
 {
@@ -37,9 +38,17 @@ namespace SchoolAPI
             services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<ValidateCourseExistsAttribute>();
 
+ 
+
             services.AddScoped<IDataShaper<UserDto>, DataShaper<UserDto>>();
 
             services.AddScoped<ValidateMediaTypeAttribute>();
+
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+            services.ConfigureJWT(Configuration);
+
+            services.AddScoped<IAuthenticationManager, AuthenticationManager>();
 
             services.Configure<Microsoft.AspNetCore.Mvc.ApiBehaviorOptions>(options => {
                 options.SuppressModelStateInvalidFilter = true;
@@ -78,6 +87,7 @@ namespace SchoolAPI
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

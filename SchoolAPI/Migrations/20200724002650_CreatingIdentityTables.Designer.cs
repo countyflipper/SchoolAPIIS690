@@ -4,14 +4,16 @@ using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace SchoolAPI.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20200724002650_CreatingIdentityTables")]
+    partial class CreatingIdentityTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,26 +98,26 @@ namespace SchoolAPI.Migrations
                         new
                         {
                             Id = new Guid("6b172b1b-f32d-4dfd-be2f-0a6c56bc2447"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(8386),
-                            EndDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(7940),
-                            StartDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(7445),
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(8815)
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(819),
+                            EndDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(362),
+                            StartDate = new DateTime(2020, 7, 23, 20, 26, 49, 130, DateTimeKind.Local).AddTicks(9854),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1256)
                         },
                         new
                         {
                             Id = new Guid("7d31f5e1-bfb4-4e35-983d-d33269299e04"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(9301),
-                            EndDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(9294),
-                            StartDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(9275),
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(9308)
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1750),
+                            EndDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1743),
+                            StartDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1726),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1759)
                         },
                         new
                         {
                             Id = new Guid("021ca3c1-0deb-4afd-ae94-2159a8479813"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(9359),
-                            EndDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(9357),
-                            StartDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(9355),
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(9361)
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1772),
+                            EndDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1770),
+                            StartDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1768),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(1774)
                         });
                 });
 
@@ -147,25 +149,25 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("6b172b1b-f32d-4dfd-be2f-0a6c56bc2446"),
                             CourseName = "Web Systems Development",
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(2150),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 130, DateTimeKind.Local).AddTicks(4505),
                             Description = "Learn version control and apply the concepts to building an API using Python, Docker, and Pycharm. ",
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(2630)
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 130, DateTimeKind.Local).AddTicks(4973)
                         },
                         new
                         {
                             Id = new Guid("7d31f5e1-bfb4-4e35-983d-d33269299e03"),
                             CourseName = "	Web Services and Middleware",
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(3125),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 130, DateTimeKind.Local).AddTicks(5454),
                             Description = "Learn how to build an ASP .NET Web using C# and github.",
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(3143)
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 130, DateTimeKind.Local).AddTicks(5472)
                         },
                         new
                         {
                             Id = new Guid("021ca3c1-0deb-4afd-ae94-2159a8479811"),
                             CourseName = "	Enterprise Database Management",
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(3153),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 130, DateTimeKind.Local).AddTicks(5483),
                             Description = "Students will obtain a conceptual foundation of database design and explore the implications for organizational database usage.",
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 179, DateTimeKind.Local).AddTicks(3155)
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 130, DateTimeKind.Local).AddTicks(5485)
                         });
                 });
 
@@ -234,30 +236,30 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("4fb597ea-72aa-4ddf-8d06-f009ad8a2d3a"),
                             AssignID = "C769E19D-C895-4AD0-97DC-9B497BFF0D3E",
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 181, DateTimeKind.Local).AddTicks(759),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 132, DateTimeKind.Local).AddTicks(3334),
                             Score = 91,
                             SubmissionText = "Please see link to assignment.",
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 181, DateTimeKind.Local).AddTicks(1223),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 132, DateTimeKind.Local).AddTicks(3810),
                             UsersID = "80abbca8-664d-4b20-b5de-024705497d4a"
                         },
                         new
                         {
                             Id = new Guid("a884663b-f3c7-46da-a541-9cef2ff12d66"),
                             AssignID = "C769E19D-C895-4AD0-97DC-9B497BFF0D3E",
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 181, DateTimeKind.Local).AddTicks(2529),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 132, DateTimeKind.Local).AddTicks(5107),
                             Score = 84,
                             SubmissionText = "Please see link to assignment.",
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 181, DateTimeKind.Local).AddTicks(2548),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 132, DateTimeKind.Local).AddTicks(5126),
                             UsersID = "021ca3c1-0deb-4afd-ae94-2159a8479811"
                         },
                         new
                         {
                             Id = new Guid("df38bdf1-c93b-43e6-9ed1-0da79d774967"),
                             AssignID = "C769E19D-C895-4AD0-97DC-9B497BFF0D3E",
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 181, DateTimeKind.Local).AddTicks(2570),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 132, DateTimeKind.Local).AddTicks(5147),
                             Score = 99,
                             SubmissionText = "Please see link to assignment.",
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 181, DateTimeKind.Local).AddTicks(2572),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 132, DateTimeKind.Local).AddTicks(5149),
                             UsersID = "86dba8c0-d178-41e7-938c-ed49778fb52a"
                         });
                 });
@@ -290,26 +292,26 @@ namespace SchoolAPI.Migrations
                         new
                         {
                             Id = new Guid("3f6e887a-40f1-4032-a347-5c526d7ca36d"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(4480),
-                            EndDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(4035),
-                            StartDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(3539),
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(4910)
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(6978),
+                            EndDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(6520),
+                            StartDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(6019),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7427)
                         },
                         new
                         {
                             Id = new Guid("b880cf73-b029-4c6d-ae21-6ee0a7a8e243"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(5430),
-                            EndDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(5414),
-                            StartDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(5390),
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(5442)
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7922),
+                            EndDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7915),
+                            StartDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7898),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7929)
                         },
                         new
                         {
                             Id = new Guid("a6a002f5-7d7b-4a3c-977b-cd78f55252bf"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(5468),
-                            EndDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(5464),
-                            StartDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(5461),
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 180, DateTimeKind.Local).AddTicks(5470)
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7944),
+                            EndDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7942),
+                            StartDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7940),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 131, DateTimeKind.Local).AddTicks(7946)
                         });
                 });
 
@@ -384,13 +386,13 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("80abbca8-664d-4b20-b5de-024705497d4a"),
                             CourseID = new Guid("6b172b1b-f32d-4dfd-be2f-0a6c56bc2446"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 178, DateTimeKind.Local).AddTicks(5065),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 129, DateTimeKind.Local).AddTicks(7382),
                             Email = "sderosa@njit.edu",
                             OrganizationId = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
                             Password = "pass123",
                             Status = "Active",
                             SystemRoleID = 2000001,
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 178, DateTimeKind.Local).AddTicks(5605),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 129, DateTimeKind.Local).AddTicks(7875),
                             UserName = "sderosa",
                             age = 34
                         },
@@ -398,13 +400,13 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("86dba8c0-d178-41e7-938c-ed49778fb52a"),
                             CourseID = new Guid("7d31f5e1-bfb4-4e35-983d-d33269299e03"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 178, DateTimeKind.Local).AddTicks(7017),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 129, DateTimeKind.Local).AddTicks(9284),
                             Email = "zwaltz@njit.edu",
                             OrganizationId = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
                             Password = "hippo87",
                             Status = "Active",
                             SystemRoleID = 3000008,
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 178, DateTimeKind.Local).AddTicks(7037),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 129, DateTimeKind.Local).AddTicks(9305),
                             UserName = "zwaltz",
                             age = 24
                         },
@@ -412,13 +414,13 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("021ca3c1-0deb-4afd-ae94-2159a8479811"),
                             CourseID = new Guid("021ca3c1-0deb-4afd-ae94-2159a8479811"),
-                            CreatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 178, DateTimeKind.Local).AddTicks(7069),
+                            CreatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 129, DateTimeKind.Local).AddTicks(9334),
                             Email = "stussel@njit.edu",
                             OrganizationId = new Guid("3d490a70-94ce-4d15-9494-5248280c2ce3"),
                             Password = "newyork1",
                             Status = "Active",
                             SystemRoleID = 8000007,
-                            UpdatedDate = new DateTime(2020, 7, 23, 20, 29, 45, 178, DateTimeKind.Local).AddTicks(7071),
+                            UpdatedDate = new DateTime(2020, 7, 23, 20, 26, 49, 129, DateTimeKind.Local).AddTicks(9336),
                             UserName = "stussel",
                             age = 48
                         });
@@ -520,22 +522,6 @@ namespace SchoolAPI.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "ff83a4b6-aa3c-4ea3-9521-164a91d33ee3",
-                            ConcurrencyStamp = "b3f44fff-7ddf-444c-b36d-2cfad9985e62",
-                            Name = "Manager",
-                            NormalizedName = "MANAGER"
-                        },
-                        new
-                        {
-                            Id = "f3fc3460-c142-4f9a-84a2-43993a527869",
-                            ConcurrencyStamp = "dc273594-ff04-4aef-9314-fb7f500a0afc",
-                            Name = "Administrator",
-                            NormalizedName = "ADMINISTRATOR"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

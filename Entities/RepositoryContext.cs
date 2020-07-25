@@ -1,10 +1,11 @@
 ﻿using Entities.Configuration;
 using Entities.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Entities
 {
-    public class RepositoryContext : DbContext
+    public class RepositoryContext : IdentityDbContext<Users>
     {
         public RepositoryContext(DbContextOptions options)
         : base(options)
@@ -13,6 +14,8 @@ namespace Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.ApplyConfiguration(new OrganizationConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new CourseConfiguration());
@@ -20,6 +23,7 @@ namespace Entities
             modelBuilder.ApplyConfiguration(new SectionEnrollManageConfiguration());
             modelBuilder.ApplyConfiguration(new SectionAssignConfiguration());
             modelBuilder.ApplyConfiguration(new CourseManagementConfiguration());
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
         }
 
         public DbSet<Organization> Organizations { get; set; }

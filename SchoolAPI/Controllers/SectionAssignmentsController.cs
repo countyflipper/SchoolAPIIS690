@@ -23,6 +23,8 @@ namespace SchoolAPI.Controllers
             _mapper = mapper;
         }
 
+
+
         [HttpGet]
         public IActionResult GetSectionAssign()
         {

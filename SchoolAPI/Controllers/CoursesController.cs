@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Entities.RequestFeatures;
 using SchoolAPI.ActionFilters;
 using Microsoft.AspNetCore.JsonPatch;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace SchoolAPI.Controllers
 {
@@ -29,8 +29,8 @@ namespace SchoolAPI.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetEmployeesForCompany( [FromQuery] CoursesParameters employeeParameters)
+        [HttpGet(Name = "GetCourses"), Authorize]
+        public async Task<IActionResult> GetCourses( [FromQuery] CoursesParameters employeeParameters)
         {
             //var company = await _repository.Course.GetCourseAsync(companyId, trackChanges: false);
             //if (company == null)

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities.Models
 {
-    public class User
+    public class User 
     {
         [Column("UserId")]
         public Guid Id { get; set; }
@@ -31,5 +31,10 @@ namespace Entities.Models
         //[ForeignKey(nameof(Courses))]
         public Guid CourseID { get; set; }
         public Courses Courses { get; set; }
+
+
+
+        public string FirstName { get; set; } 
+        public string LastName { get; set; } 
     }
 }
