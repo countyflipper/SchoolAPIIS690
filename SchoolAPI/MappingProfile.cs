@@ -45,6 +45,8 @@ namespace SchoolAPI
             CreateMap<CourseSectionUpdateForDto, CourseSection>();
 
             //-----------------------------------------------------------------
+
+            CreateMap<UserForRegistrationDto, Users>();
         }
     }
 }

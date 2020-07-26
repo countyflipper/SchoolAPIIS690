@@ -29,7 +29,7 @@ namespace SchoolAPI.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet(Name = "GetCourses"), Authorize]
+        [HttpGet]
         public async Task<IActionResult> GetCourses( [FromQuery] CoursesParameters employeeParameters)
         {
             //var company = await _repository.Course.GetCourseAsync(companyId, trackChanges: false);
@@ -65,25 +65,29 @@ namespace SchoolAPI.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost(Name = "CourseByID"), Authorize(Roles = "Administrator")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
-        public async Task<IActionResult> CreateEmployeeForCompany(Guid companyId, [FromBody] CourseForCreationDto employee)
+        public IActionResult CreateNewCourse([FromBody] CourseForCreationDto course)
         {
-            var company = await _repository.Course.GetCourseAsync(companyId, trackChanges: false);
-            if (company == null)
+            if (course == null)
             {
-                _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
-                return NotFound();
+                _logger.LogError("User ForCreationDto object sent from client is null.");
+                return BadRequest("User ForCreationDto object is null");
+            }
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the UserForUpdateDto object");
+                return UnprocessableEntity(ModelState);
             }
 
-            var employeeEntity = _mapper.Map<Courses>(employee);
+            var courseEntity = _mapper.Map<Courses>(course);
 
-            _repository.Course.CreateCourse(employeeEntity);
-            await _repository.SaveAsync();
+            _repository.Course.CreateCourse(courseEntity);
+            _repository.Save();
 
-            var employeeToReturn = _mapper.Map<CourseDto>(employeeEntity);
+            var userToReturn = _mapper.Map<CourseDto>(courseEntity);
 
-            return CreatedAtRoute("GetEmployeeForCompany", new { companyId, id = employeeToReturn.id }, employeeToReturn);
+            return CreatedAtRoute("CourseByID", new { id = userToReturn.id }, userToReturn);
         }
 
         [HttpDelete("{id}")]
