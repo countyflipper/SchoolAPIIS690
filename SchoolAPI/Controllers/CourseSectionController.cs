@@ -10,6 +10,7 @@ using Entities.RequestFeatures;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SchoolAPI.Controllers
 {
@@ -81,7 +82,8 @@ namespace SchoolAPI.Controllers
 
         /**************************************************************************************/
 
-        [HttpPost(Name = "CourseSectionByID")]
+
+        [HttpPost, Authorize(Roles = "Administrator")]
         public IActionResult CreateCourseSection([FromBody] CourseSectionForCreationDto coursesection)
         {
             if (coursesection == null)
@@ -148,7 +150,38 @@ namespace SchoolAPI.Controllers
 
             return NoContent();
         }
+        /**************************************************************************************/
 
+        [HttpPatch("{id}")]
+        public IActionResult PartiallyUpdateCourseSection(Guid id, [FromBody] JsonPatchDocument<CourseSectionUpdateForDto> patchDoc)
+        {
+  
+            
+            if (patchDoc == null)
+            {
+                _logger.LogError("patchDoc object sent from client is null.");
+                return BadRequest("patchDoc object is null");
+            }
+
+            var coursesectionEntity = _repository.CourseSection.GetCourseSection( id, trackChanges: true);
+            if (coursesectionEntity == null)
+            {
+                _logger.LogInfo($"Course Section with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+
+            var coursesectionToPatch = _mapper.Map<CourseSectionUpdateForDto>(coursesectionEntity);
+
+            patchDoc.ApplyTo(coursesectionToPatch);
+
+            _mapper.Map(coursesectionToPatch, coursesectionEntity);
+
+
+                _repository.Save();
+
+                return NoContent();
+          
+        }
 
     }
 }

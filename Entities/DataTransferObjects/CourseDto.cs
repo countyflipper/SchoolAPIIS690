@@ -1,6 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Entities.Models;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Entities.DataTransferObjects
 {
@@ -14,6 +16,10 @@ namespace Entities.DataTransferObjects
         public DateTime CreatedDate { get; set; }
 
         public DateTime UpdatedDate { get; set; }
+
+        [ForeignKey(nameof(CourseSection))]
+        public Guid CourseSectionID { get; set; }
+        public CourseSection SectionID { get; set; }
 
     }
 }

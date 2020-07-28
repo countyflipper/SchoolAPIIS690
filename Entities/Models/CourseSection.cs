@@ -10,6 +10,13 @@ namespace Entities.Models
         [Column("CourseSectionID")]
         public Guid Id { get; set; }
 
+        public string UserId { get; set; }
+
+
+        [Required(ErrorMessage = "SectionID is a required field.")]
+        public string SectionID { get; set; }
+
+
         [Required(ErrorMessage = "CourseSection name is a required field.")]
         [MaxLength(60, ErrorMessage = "Maximum length for the Name is 60 characters.")]
         public DateTime StartDate { get; set; }
@@ -20,7 +27,7 @@ namespace Entities.Models
 
         public DateTime UpdatedDate { get; set; }
 
-        public ICollection<User> Users { get; set; }
+  
         //----------------------------------------------------
 
         /*     [ForeignKey(nameof(User))]

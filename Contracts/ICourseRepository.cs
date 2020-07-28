@@ -9,7 +9,9 @@ namespace Contracts
     public interface ICourseRepository
     {
         IEnumerable<Courses> GetAllCourses(bool trackChanges);
-        Courses GetCourse(Guid companyId, bool trackChanges);
+        Courses GetCourse(Guid courseSectionID, Guid id, bool trackChanges);
+
+        Courses GetACourse( Guid id, bool trackChanges);
 
         Task<PagedList<Courses>> GetCoursesAsync(CoursesParameters coursesParameters, bool trackChanges);
         Task<Courses> GetCourseAsync(Guid companyId, bool trackChanges);

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CompanyEmployees.Controllers
 {
@@ -26,7 +27,7 @@ namespace CompanyEmployees.Controllers
             _authManager = authManager;
         }
 
-        [HttpPost]
+        [HttpPost(Name = "CourseSectionByID"), Authorize(Roles = "Administrator")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> RegisterUser([FromBody] UserForRegistrationDto userForRegistration)
         {

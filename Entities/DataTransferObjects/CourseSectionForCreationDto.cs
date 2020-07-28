@@ -10,8 +10,12 @@ namespace Entities.DataTransferObjects
 
         public DateTime EndDate { get; set; }
 
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get { return DateTime.Now.Date; } }
 
-        public DateTime UpdatedDate { get; set; }
+        public DateTime UpdatedDate { get { return DateTime.Now.Date; } }
+
+        public string UserId { get; set; }
+
+        public string SectionID { get; set; }
     }
 }

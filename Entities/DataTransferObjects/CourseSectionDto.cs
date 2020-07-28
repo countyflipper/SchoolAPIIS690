@@ -16,5 +16,9 @@ namespace Entities.DataTransferObjects
         public DateTime CreatedDate { get; set; }
 
         public DateTime UpdatedDate { get; set; }
+
+        public string UserId { get; set; }
+
+        public string SectionID { get; set; }
     }
 }

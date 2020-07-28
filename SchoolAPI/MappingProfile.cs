@@ -28,21 +28,21 @@ namespace SchoolAPI
                  opt => opt.MapFrom(x => string.Join(' ', x.CourseName, x.Description)));
 
             CreateMap<CourseForCreationDto, Courses>();
-            CreateMap<CourseForUpdateDto, Courses>();
+            CreateMap<CourseForUpdateDto, Courses>().ReverseMap();
             //-----------------------------------------------------------------
 
             CreateMap<SectionAssign, SectionAssignDTO>()
                 .ForMember(c => c.AssignID,
                  opt => opt.MapFrom(x => string.Join(' ', x.SubmissionText, x.Score)));
 
-            CreateMap<SectionAssignForCreationDTO, SectionAssign>();
-            CreateMap<SectionAssignForUpdateDTO, SectionAssign>();
+            CreateMap<SectionAssignForCreationDTO, SectionAssignDTO>();
+            CreateMap<SectionAssignForUpdateDTO, SectionAssignDTO>();
             //-----------------------------------------------------------------
 
             CreateMap<CourseSection, CourseSectionDto>();
 
             CreateMap<CourseSectionForCreationDto, CourseSection>();
-            CreateMap<CourseSectionUpdateForDto, CourseSection>();
+            CreateMap<CourseSectionUpdateForDto, CourseSection>().ReverseMap();
 
             //-----------------------------------------------------------------
 

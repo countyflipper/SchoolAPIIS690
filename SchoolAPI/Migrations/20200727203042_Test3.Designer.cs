@@ -4,14 +4,16 @@ using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace SchoolAPI.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20200727203042_Test3")]
+    partial class Test3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,31 +105,31 @@ namespace SchoolAPI.Migrations
                         new
                         {
                             Id = new Guid("6b172b1b-f32d-4dfd-be2f-0a6c56bc2447"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(3716),
-                            EndDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(3256),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(4473),
+                            EndDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(4029),
                             SectionID = "D01",
-                            StartDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(2756),
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(4158),
+                            StartDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(3547),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(4986),
                             UserId = "80abbca8-664d-4b20-b5de-024705497d4a"
                         },
                         new
                         {
                             Id = new Guid("7d31f5e1-bfb4-4e35-983d-d33269299e04"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(5094),
-                            EndDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(5087),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(5893),
+                            EndDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(5886),
                             SectionID = "D02",
-                            StartDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(5066),
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(5103),
+                            StartDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(5867),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(5901),
                             UserId = ""
                         },
                         new
                         {
                             Id = new Guid("021ca3c1-0deb-4afd-ae94-2159a8479813"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(5122),
-                            EndDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(5120),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(5919),
+                            EndDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(5917),
                             SectionID = "D03",
-                            StartDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(5118),
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(5124),
+                            StartDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(5915),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 12, DateTimeKind.Local).AddTicks(5921),
                             UserId = ""
                         });
                 });
@@ -160,25 +162,25 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("6b172b1b-f32d-4dfd-be2f-0a6c56bc2446"),
                             CourseName = "Web Systems Development",
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(6796),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(7354),
                             Description = "Learn version control and apply the concepts to building an API using Python, Docker, and Pycharm. ",
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(7263)
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(7828)
                         },
                         new
                         {
                             Id = new Guid("7d31f5e1-bfb4-4e35-983d-d33269299e03"),
                             CourseName = "	Web Services and Middleware",
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(7741),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(8315),
                             Description = "Learn how to build an ASP .NET Web using C# and github.",
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(7773)
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(8335)
                         },
                         new
                         {
                             Id = new Guid("021ca3c1-0deb-4afd-ae94-2159a8479811"),
                             CourseName = "	Enterprise Database Management",
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(7794),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(8356),
                             Description = "Students will obtain a conceptual foundation of database design and explore the implications for organizational database usage.",
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(7796)
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(8358)
                         });
                 });
 
@@ -247,30 +249,30 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("4fb597ea-72aa-4ddf-8d06-f009ad8a2d3a"),
                             AssignID = "C769E19D-C895-4AD0-97DC-9B497BFF0D3E",
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(6770),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(7346),
                             Score = 91,
                             SubmissionText = "Please see link to assignment.",
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(7269),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(7808),
                             UsersID = "80abbca8-664d-4b20-b5de-024705497d4a"
                         },
                         new
                         {
                             Id = new Guid("a884663b-f3c7-46da-a541-9cef2ff12d66"),
                             AssignID = "C769E19D-C895-4AD0-97DC-9B497BFF0D3E",
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(8556),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(9074),
                             Score = 84,
                             SubmissionText = "Please see link to assignment.",
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(8575),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(9093),
                             UsersID = "021ca3c1-0deb-4afd-ae94-2159a8479811"
                         },
                         new
                         {
                             Id = new Guid("df38bdf1-c93b-43e6-9ed1-0da79d774967"),
                             AssignID = "C769E19D-C895-4AD0-97DC-9B497BFF0D3E",
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(8609),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(9113),
                             Score = 99,
                             SubmissionText = "Please see link to assignment.",
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(8611),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(9115),
                             UsersID = "86dba8c0-d178-41e7-938c-ed49778fb52a"
                         });
                 });
@@ -303,26 +305,26 @@ namespace SchoolAPI.Migrations
                         new
                         {
                             Id = new Guid("3f6e887a-40f1-4032-a347-5c526d7ca36d"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(264),
-                            EndDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(9817),
-                            StartDate = new DateTime(2020, 7, 27, 16, 33, 17, 681, DateTimeKind.Local).AddTicks(9323),
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(697)
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(1000),
+                            EndDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(556),
+                            StartDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(56),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(1433)
                         },
                         new
                         {
                             Id = new Guid("b880cf73-b029-4c6d-ae21-6ee0a7a8e243"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(1176),
-                            EndDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(1169),
-                            StartDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(1153),
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(1185)
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(1973),
+                            EndDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(1965),
+                            StartDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(1944),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(1982)
                         },
                         new
                         {
                             Id = new Guid("a6a002f5-7d7b-4a3c-977b-cd78f55252bf"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(1212),
-                            EndDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(1211),
-                            StartDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(1208),
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 682, DateTimeKind.Local).AddTicks(1214)
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(2012),
+                            EndDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(2010),
+                            StartDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(2008),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 13, DateTimeKind.Local).AddTicks(2014)
                         });
                 });
 
@@ -391,13 +393,13 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("80abbca8-664d-4b20-b5de-024705497d4a"),
                             CourseID = new Guid("6b172b1b-f32d-4dfd-be2f-0a6c56bc2446"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 679, DateTimeKind.Local).AddTicks(9631),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(142),
                             Email = "sderosa@njit.edu",
                             OrganizationId = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
                             Password = "pass123",
                             Status = "Active",
                             SystemRoleID = 2000001,
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(306),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(636),
                             UserName = "sderosa",
                             age = 34
                         },
@@ -405,13 +407,13 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("86dba8c0-d178-41e7-938c-ed49778fb52a"),
                             CourseID = new Guid("7d31f5e1-bfb4-4e35-983d-d33269299e03"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(1713),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(2053),
                             Email = "zwaltz@njit.edu",
                             OrganizationId = new Guid("c9d4c053-49b6-410c-bc78-2d54a9991870"),
                             Password = "hippo87",
                             Status = "Active",
                             SystemRoleID = 3000008,
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(1739),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(2076),
                             UserName = "zwaltz",
                             age = 24
                         },
@@ -419,16 +421,87 @@ namespace SchoolAPI.Migrations
                         {
                             Id = new Guid("021ca3c1-0deb-4afd-ae94-2159a8479811"),
                             CourseID = new Guid("021ca3c1-0deb-4afd-ae94-2159a8479811"),
-                            CreatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(1769),
+                            CreatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(2102),
                             Email = "stussel@njit.edu",
                             OrganizationId = new Guid("3d490a70-94ce-4d15-9494-5248280c2ce3"),
                             Password = "newyork1",
                             Status = "Active",
                             SystemRoleID = 8000007,
-                            UpdatedDate = new DateTime(2020, 7, 27, 16, 33, 17, 680, DateTimeKind.Local).AddTicks(1771),
+                            UpdatedDate = new DateTime(2020, 7, 27, 16, 30, 42, 11, DateTimeKind.Local).AddTicks(2104),
                             UserName = "stussel",
                             age = 48
                         });
+                });
+
+            modelBuilder.Entity("Entities.Models.Users", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -437,40 +510,152 @@ namespace SchoolAPI.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
 
                     b.Property<string>("NormalizedName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
 
                     b.HasKey("Id");
 
-                    b.ToTable("IdentityRole");
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles");
 
                     b.HasData(
                         new
                         {
-                            Id = "c33786ac-5d83-40e9-a8e9-5b6aa943ce4b",
-                            ConcurrencyStamp = "3eefaae4-5b09-450f-81bd-0d730e65f721",
+                            Id = "470b8b33-4d6a-42cc-b8d5-df53aaa240cf",
+                            ConcurrencyStamp = "57c94600-7477-4397-8f09-f0e980769197",
                             Name = "Manager",
                             NormalizedName = "MANAGER"
                         },
                         new
                         {
-                            Id = "a55c4876-0364-49c2-9b60-aa06554d46d7",
-                            ConcurrencyStamp = "2bdf9824-8f4d-4770-a7a7-de2f9e92f8de",
+                            Id = "e5f1da41-3778-44cf-8561-04a4c69de4b5",
+                            ConcurrencyStamp = "e3023b44-9df6-4ed9-881a-3f4ee62896da",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "3813142f-681f-45ca-a7ad-6cfc5f6ce068",
-                            ConcurrencyStamp = "3c34ba59-e625-42b6-acaa-9145ee18e913",
+                            Id = "14c8674a-58c7-4a75-a3b9-e9881ce748fe",
+                            ConcurrencyStamp = "2b02d05e-611b-4988-9aaa-25b10273a46a",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         });
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("Entities.Models.User", b =>
@@ -492,6 +677,57 @@ namespace SchoolAPI.Migrations
                     b.HasOne("Entities.Models.SectionEnrollManage", null)
                         .WithMany("Users")
                         .HasForeignKey("SectionEnrollManageId");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("Entities.Models.Users", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("Entities.Models.Users", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Models.Users", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("Entities.Models.Users", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -35,13 +35,13 @@ namespace SchoolAPI.Controllers
         [HttpGet]
         [HttpHead]
         [ServiceFilter(typeof(ValidateMediaTypeAttribute))]
-        public async Task<IActionResult> GetUsersAll( [FromQuery] UserParameter userParameters)
+        public async Task<IActionResult> GetUsersAll([FromQuery] UserParameter userParameters)
         {
             if (!userParameters.ValidAgeRange)
                 return BadRequest("Max age can't be less than min age.");
 
 
-            var usersFromDb = await _repository.User.GetAllUserAsync( userParameters, trackChanges: false);
+            var usersFromDb = await _repository.User.GetAllUserAsync(userParameters, trackChanges: false);
 
             Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(usersFromDb.MetaData));
 

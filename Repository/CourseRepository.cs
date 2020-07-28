@@ -41,10 +41,13 @@ namespace Repository
            .ToList();
 
 
-        public Courses GetCourse(Guid Id, bool trackChanges) =>
+        public Courses GetCourse(Guid courseSection, Guid Id, bool trackChanges) =>
          FindByCondition(c => c.Id.Equals(Id), trackChanges)
         .SingleOrDefault();
 
+        public Courses GetACourse( Guid Id, bool trackChanges) =>
+             FindByCondition(c => c.Id.Equals(Id), trackChanges)
+            .SingleOrDefault();
 
         public void CreateCourse(Courses courses) => Create(courses);
 
