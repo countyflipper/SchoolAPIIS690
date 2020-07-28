@@ -126,7 +126,7 @@ namespace SchoolAPI.Controllers
         }
 
         [HttpPatch("{id}")]
-        public async Task<IActionResult> PartiallyUpdateCourses(Guid id, [FromBody] JsonPatchDocument<CourseForUpdateDto> patchDoc)
+        public async Task<IActionResult>PartiallyUpdateCourses(Guid id, [FromBody] JsonPatchDocument<CourseForUpdateDto> patchDoc)
         {
             if (patchDoc == null)
             {
