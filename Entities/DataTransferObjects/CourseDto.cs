@@ -17,8 +17,7 @@ namespace Entities.DataTransferObjects
 
         public DateTime UpdatedDate { get; set; }
 
-        [ForeignKey(nameof(CourseSection))]
-        public User UserID { get; set; }
+
 
     }
 }

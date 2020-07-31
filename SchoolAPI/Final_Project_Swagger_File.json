@@ -1,0 +1,2264 @@
+﻿{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "School API",
+		"version": "v1"
+	},
+	"paths": {
+		"/api/authentication": {
+			"post": {
+				"tags": [
+					"Authentication"
+				],
+				"operationId": "Register",
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForRegistrationDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForRegistrationDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForRegistrationDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForRegistrationDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForRegistrationDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForRegistrationDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForRegistrationDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/authentication/login": {
+			"post": {
+				"tags": [
+					"Authentication"
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForAuthenticationDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForAuthenticationDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForAuthenticationDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForAuthenticationDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForAuthenticationDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForAuthenticationDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForAuthenticationDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/CourseManages": {
+			"get": {
+				"tags": [
+					"CourseManagement"
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"CourseManagement"
+				],
+				"operationId": "CourseManageByID",
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForCreationDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForCreationDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForCreationDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForCreationDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForCreationDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForCreationDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForCreationDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/CourseManages/{id}": {
+			"get": {
+				"tags": [
+					"CourseManagement"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"CourseManagement"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForUpdateDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForUpdateDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForUpdateDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForUpdateDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForUpdateDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForUpdateDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseManageForUpdateDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"CourseManagement"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/Courses": {
+			"get": {
+				"tags": [
+					"Courses"
+				],
+				"parameters": [
+					{
+						"name": "PageNumber",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "PageSize",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "OrderBy",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					},
+					{
+						"name": "Fields",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Courses"
+				],
+				"operationId": "CourseByID",
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForCreationDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForCreationDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForCreationDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForCreationDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForCreationDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForCreationDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForCreationDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/Courses/{id}": {
+			"get": {
+				"tags": [
+					"Courses"
+				],
+				"operationId": "GetACourse",
+				"parameters": [
+					{
+						"name": "coursesectionID",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					},
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Courses"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Courses"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForUpdateDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForUpdateDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForUpdateDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForUpdateDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForUpdateDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForUpdateDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseForUpdateDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"Courses"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"text/json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/CourseSection": {
+			"get": {
+				"tags": [
+					"CourseSection"
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"CourseSection"
+				],
+				"operationId": "CourseSectionByID",
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionForCreationDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionForCreationDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionForCreationDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionForCreationDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionForCreationDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionForCreationDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionForCreationDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/CourseSection/{id}": {
+			"get": {
+				"tags": [
+					"CourseSection"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"CourseSection"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionUpdateForDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionUpdateForDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionUpdateForDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionUpdateForDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionUpdateForDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionUpdateForDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/CourseSectionUpdateForDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"CourseSection"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"CourseSection"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"text/json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/SectionAssign": {
+			"get": {
+				"tags": [
+					"SectionAssignments"
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"SectionAssignments"
+				],
+				"operationId": "SectionAssignByID",
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForCreationDTO"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForCreationDTO"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForCreationDTO"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForCreationDTO"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForCreationDTO"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForCreationDTO"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForCreationDTO"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/SectionAssign/{id}": {
+			"get": {
+				"tags": [
+					"SectionAssignments"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"SectionAssignments"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForUpdateDTO"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForUpdateDTO"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForUpdateDTO"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForUpdateDTO"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForUpdateDTO"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForUpdateDTO"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionAssignForUpdateDTO"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"SectionAssignments"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/SectionEnrollmentManage": {
+			"get": {
+				"tags": [
+					"SectionEnrollmentManage"
+				],
+				"parameters": [
+					{
+						"name": "PageNumber",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "PageSize",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "OrderBy",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					},
+					{
+						"name": "Fields",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"SectionEnrollmentManage"
+				],
+				"operationId": "SectionEnrollManageByID",
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/SectionEnrollmentManage/{id}": {
+			"get": {
+				"tags": [
+					"SectionEnrollmentManage"
+				],
+				"operationId": "GetASectionEnrollmentManage",
+				"parameters": [
+					{
+						"name": "coursesectionID",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					},
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"SectionEnrollmentManage"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"SectionEnrollmentManage"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageForUpdateDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageForUpdateDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageForUpdateDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageForUpdateDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageForUpdateDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageForUpdateDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/SectionEnrollmentManageForUpdateDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"SectionEnrollmentManage"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"text/json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/Users": {
+			"get": {
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"name": "MinAge",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "MaxAge",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "ValidAgeRange",
+						"in": "query",
+						"schema": {
+							"type": "boolean"
+						}
+					},
+					{
+						"name": "SearchTerm",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					},
+					{
+						"name": "UserName",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					},
+					{
+						"name": "PageNumber",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "PageSize",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "OrderBy",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					},
+					{
+						"name": "Fields",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"head": {
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"name": "MinAge",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "MaxAge",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "ValidAgeRange",
+						"in": "query",
+						"schema": {
+							"type": "boolean"
+						}
+					},
+					{
+						"name": "SearchTerm",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					},
+					{
+						"name": "UserName",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					},
+					{
+						"name": "PageNumber",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "PageSize",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					},
+					{
+						"name": "OrderBy",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					},
+					{
+						"name": "Fields",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"nullable": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"User"
+				],
+				"operationId": "UserByID",
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForCreationDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForCreationDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForCreationDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForCreationDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForCreationDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForCreationDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForCreationDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/api/v1/Users/{id}": {
+			"get": {
+				"tags": [
+					"User"
+				],
+				"operationId": "GetUser",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForUpdateDto"
+							}
+						},
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForUpdateDto"
+							}
+						},
+						"text/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForUpdateDto"
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForUpdateDto"
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForUpdateDto"
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForUpdateDto"
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"$ref": "#/components/schemas/UserForUpdateDto"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "uuid"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json-patch+json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"text/json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/*+json": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"text/xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						},
+						"application/*+xml": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/Operation"
+								},
+								"nullable": true
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/WeatherForecast": {
+			"get": {
+				"tags": [
+					"WeatherForecast"
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/WeatherForecast"
+									}
+								}
+							},
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/WeatherForecast"
+									}
+								}
+							},
+							"text/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/WeatherForecast"
+									}
+								}
+							},
+							"application/xml": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/WeatherForecast"
+									}
+								}
+							},
+							"text/xml": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/WeatherForecast"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"UserForRegistrationDto": {
+				"required": [
+					"password",
+					"userName"
+				],
+				"type": "object",
+				"properties": {
+					"firstName": {
+						"type": "string",
+						"nullable": true
+					},
+					"lastName": {
+						"type": "string",
+						"nullable": true
+					},
+					"userName": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string",
+						"nullable": true
+					},
+					"phoneNumber": {
+						"type": "string",
+						"nullable": true
+					},
+					"roles": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"UserForAuthenticationDto": {
+				"required": [
+					"password",
+					"userName"
+				],
+				"type": "object",
+				"properties": {
+					"userName": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"additionalProperties": false
+			},
+			"CourseManageForCreationDto": {
+				"required": [
+					"assigmentID",
+					"assignmentTitle",
+					"description"
+				],
+				"type": "object",
+				"properties": {
+					"assigmentID": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"assignmentTitle": {
+						"type": "string"
+					},
+					"description": {
+						"maxLength": 60,
+						"minLength": 20,
+						"type": "string"
+					}
+				},
+				"additionalProperties": false
+			},
+			"CourseManageForUpdateDto": {
+				"type": "object",
+				"properties": {
+					"assigmentID": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"assignmentTitle": {
+						"type": "string",
+						"nullable": true
+					},
+					"description": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"CourseForCreationDto": {
+				"required": [
+					"courseName",
+					"createdDate",
+					"description",
+					"updatedDate"
+				],
+				"type": "object",
+				"properties": {
+					"courseName": {
+						"maxLength": 25,
+						"minLength": 10,
+						"type": "string"
+					},
+					"description": {
+						"maxLength": 100,
+						"minLength": 10,
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"additionalProperties": false
+			},
+			"CourseForUpdateDto": {
+				"required": [
+					"courseName",
+					"createdDate",
+					"description",
+					"updatedDate"
+				],
+				"type": "object",
+				"properties": {
+					"courseName": {
+						"maxLength": 25,
+						"minLength": 10,
+						"type": "string"
+					},
+					"description": {
+						"maxLength": 50,
+						"minLength": 10,
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"additionalProperties": false
+			},
+			"OperationType": {
+				"enum": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				],
+				"type": "integer",
+				"format": "int32"
+			},
+			"Operation": {
+				"type": "object",
+				"properties": {
+					"value": {
+						"type": "object",
+						"additionalProperties": false,
+						"nullable": true
+					},
+					"operationType": {
+						"$ref": "#/components/schemas/OperationType"
+					},
+					"path": {
+						"type": "string",
+						"nullable": true
+					},
+					"op": {
+						"type": "string",
+						"nullable": true
+					},
+					"from": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"CourseSectionForCreationDto": {
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"endDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time",
+						"readOnly": true
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time",
+						"readOnly": true
+					},
+					"userId": {
+						"type": "string",
+						"nullable": true
+					},
+					"sectionID": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"CourseSectionUpdateForDto": {
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"endDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time",
+						"readOnly": true
+					},
+					"userId": {
+						"type": "string",
+						"nullable": true
+					},
+					"sectionID": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"SectionAssignForCreationDTO": {
+				"required": [
+					"createdDate",
+					"score",
+					"submissionText",
+					"updatedDate"
+				],
+				"type": "object",
+				"properties": {
+					"submissionText": {
+						"maxLength": 60,
+						"minLength": 10,
+						"type": "string"
+					},
+					"score": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"usersID": {
+						"type": "string",
+						"nullable": true
+					},
+					"assignID": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"SectionAssignForUpdateDTO": {
+				"required": [
+					"createdDate",
+					"score",
+					"submissionText",
+					"updatedDate"
+				],
+				"type": "object",
+				"properties": {
+					"submissionText": {
+						"maxLength": 60,
+						"minLength": 10,
+						"type": "string"
+					},
+					"score": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"usersID": {
+						"type": "string",
+						"nullable": true
+					},
+					"assignID": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"SectionEnrollmentManageDto": {
+				"required": [
+					"startDate"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string",
+						"format": "uuid"
+					},
+					"startDate": {
+						"maxLength": 60,
+						"type": "string",
+						"format": "date-time"
+					},
+					"endDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"sectionID": {
+						"type": "string",
+						"nullable": true
+					},
+					"userID": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"SectionEnrollmentManageForUpdateDto": {
+				"required": [
+					"startDate"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string",
+						"format": "uuid"
+					},
+					"startDate": {
+						"maxLength": 60,
+						"type": "string",
+						"format": "date-time"
+					},
+					"endDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"sectionID": {
+						"type": "string",
+						"nullable": true
+					},
+					"userID": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"UserForCreationDto": {
+				"required": [
+					"email",
+					"status",
+					"username"
+				],
+				"type": "object",
+				"properties": {
+					"username": {
+						"maxLength": 20,
+						"minLength": 10,
+						"type": "string"
+					},
+					"email": {
+						"maxLength": 20,
+						"minLength": 5,
+						"type": "string"
+					},
+					"status": {
+						"type": "string"
+					},
+					"age": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"organizationId": {
+						"type": "string",
+						"nullable": true
+					},
+					"courseID": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"UserForUpdateDto": {
+				"required": [
+					"email",
+					"status",
+					"username"
+				],
+				"type": "object",
+				"properties": {
+					"username": {
+						"maxLength": 20,
+						"minLength": 10,
+						"type": "string"
+					},
+					"email": {
+						"maxLength": 20,
+						"minLength": 5,
+						"type": "string"
+					},
+					"status": {
+						"type": "string"
+					},
+					"age": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"organizationId": {
+						"type": "string",
+						"nullable": true
+					},
+					"courseID": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			},
+			"WeatherForecast": {
+				"type": "object",
+				"properties": {
+					"date": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"temperatureC": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"temperatureF": {
+						"type": "integer",
+						"format": "int32",
+						"readOnly": true
+					},
+					"summary": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"additionalProperties": false
+			}
+		}
+	}
+}

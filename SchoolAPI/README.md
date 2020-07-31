@@ -31,6 +31,10 @@
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project5-6D.PNG)
 
 ### vi) Register for Sections: The user should be able to register for any section of any course. But check for the validity of the registration by checking if that course/section exists or not.
+![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project6-3.PNG)
+![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project6-1.PNG)
+![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project6-2.PNG)
+
 
 ### vii) Role Management: Only admins should be able to create new courses and sections. General users can only register for any course/section. Return the relevant response code if a general user tries to perform these actions.
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project7-1.PNG)

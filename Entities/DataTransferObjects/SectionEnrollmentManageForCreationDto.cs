@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Entities.Models
+
+namespace Entities.DataTransferObjects
 {
-    public class SectionEnrollManage
+    public class SectionEnrollmentManageForCreationDto
     {
         [Column("SectionEnrollID")]
         public Guid Id { get; set; }
@@ -24,19 +25,5 @@ namespace Entities.Models
         public string SectionID { get; set; }
 
         public string UserID { get; set; }
-        //----------------------------------------------------
-
-        /*     [ForeignKey(nameof(User))]
-             public Guid UserId { get; set; }
-             public User User { get; set; }
-
-             //----------------------------------------------------
-
-             [ForeignKey(nameof(Organization))]
-             public Guid OrganizationId { get; set; }
-
-             public Organization Organization { get; set; }
-        */
-        //----------------------------------------------------
     }
 }

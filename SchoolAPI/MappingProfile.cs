@@ -46,6 +46,12 @@ namespace SchoolAPI
 
             //-----------------------------------------------------------------
 
+            CreateMap<SectionEnrollManage, SectionEnrollmentManageDto>();
+
+            CreateMap<SectionEnrollmentManageForCreationDto, SectionEnrollManage>();
+            CreateMap<SectionEnrollmentManageForUpdateDto, SectionEnrollManage>().ReverseMap();
+
+            //-----------------------------------------------------------------
             CreateMap<UserForRegistrationDto, Users>();
         }
     }
