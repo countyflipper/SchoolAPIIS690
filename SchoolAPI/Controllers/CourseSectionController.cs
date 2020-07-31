@@ -83,7 +83,7 @@ namespace SchoolAPI.Controllers
         /**************************************************************************************/
 
 
-        [HttpPost, Authorize(Roles = "Administrator")]
+        [HttpPost(Name = "CourseSectionByID"), Authorize(Roles = "Administrator")]
         public IActionResult CreateCourseSection([FromBody] CourseSectionForCreationDto coursesection)
         {
             if (coursesection == null)

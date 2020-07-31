@@ -1,37 +1,21 @@
 ﻿﻿## Overview
 
-This will be my main directory aka the root for files and link.
+i) User Registration: Any user must be able to register through this page. Details like username, email id, password, first name, last name, phone number etc. should be captured.
+![Link to programming running](https://raw.githubusercontent.com/countyflipper/HelloMyNameStefanDeRosa/master/screenshots/StefanDeRosaScreenshot.PNG)
+![Link to programming running](https://raw.githubusercontent.com/countyflipper/HelloMyNameStefanDeRosa/master/screenshots/StefanDeRosaScreenshot.PNG)
+![Link to programming running](https://raw.githubusercontent.com/countyflipper/HelloMyNameStefanDeRosa/master/screenshots/StefanDeRosaScreenshot.PNG)
 
-## Module 1
-*   [API Paper](https://github.com/countyflipper/CompanyEmployees/blob/master/files/Stefan%20DeRosa%20-%20Application%20Programming%20Interfaces.pdf)
+ii) User Login: The registered users should be able to login through this page using proper credentials. Invalid login details should return an error with proper response code.
 
+iii) Privilege escalation: This page should allow admin rights to the selected user.
 
-## Module 2
-*   [Data Dictionary](https://github.com/countyflipper/CompanyEmployees/blob/master/files/Stefan%20DeRosa%20-%20Data%20Dictionary.pdf)
-*   [ER Diagram](https://github.com/countyflipper/CompanyEmployees/blob/master/files/Stefan%20DeRosa%20-%20ERD.pdf)
+iv) BREAD Courses: The user should be able to browse, read, edit, add and delete courses (BREAD). You can create separate pages where the user can browse all the available courses, read their description, edit them if required, add new courses and delete old courses.
 
-## Module 3
-*   [Swagger YMAL School API](https://github.com/countyflipper/CompanyEmployees/blob/Module3/files/SchoolAPI%20Swagger.yaml)
-*   [Swagger JSON School API](https://github.com/countyflipper/CompanyEmployees/blob/Module3/files/School%20API%20-%20Swagger.json)
+v) BREAD Sections: The user should be able to perform the BREAD operations (as mentioned above) for different sections of the available courses. This page should also check if the relevant course exists or not while adding a section.
 
-## Module 4
-*   [Module 4](https://github.com/countyflipper/CompanyEmployees/tree/Module4)
+vi) Register for Sections: The user should be able to register for any section of any course. But check for the validity of the registration by checking if that course/section exists or not.
 
-## Module 5
-*   [Module 5](https://github.com/countyflipper/CompanyEmployees/tree/Module5)
+vii) Role Management: Only admins should be able to create new courses and sections. General users can only register for any course/section. Return the relevant response code if a general user tries to perform these actions.
 
-## Module 6
-*   [Module 6](https://github.com/countyflipper/CompanyEmployees/tree/Module6)
+viii) Caching, paging, sorting, filtering
 
-## Module 7
-<<<<<<< HEAD
-*   [Module 7](https://github.com/countyflipper/SchoolAPI/tree/Module7/SchoolAPI)
-
-## Module 8
-*   [Module 8](https://github.com/countyflipper/SchoolAPI/tree/Module8/SchoolAPI)
-
-## Module 9
-*   [Module 9](https://github.com/countyflipper/SchoolAPI/tree/Module9/SchoolAPI)
-
-## Module 10
-*   [Module 10](https://github.com/countyflipper/SchoolAPI/tree/Module10/SchoolAPI)
