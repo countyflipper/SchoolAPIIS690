@@ -2,7 +2,7 @@
 ## Teammembers: Stefan DeRosa and Steven Morales
 
 i) User Registration: Any user must be able to register through this page. Details like username, email id, password, first name, last name, phone number etc. should be captured.
-![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project1.PNG)
+![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/project1.PNG)
 
 ii) User Login: The registered users should be able to login through this page using proper credentials. Invalid login details should return an error with proper response code.
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project2-1.PNG)
