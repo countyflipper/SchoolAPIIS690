@@ -1,4 +1,4 @@
-﻿﻿## Final Project
+# Final Project
 ## Teammembers: Stefan DeRosa and Steven Morales
 
 i) User Registration: Any user must be able to register through this page. Details like username, email id, password, first name, last name, phone number etc. should be captured.
