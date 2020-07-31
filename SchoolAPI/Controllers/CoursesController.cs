@@ -51,14 +51,14 @@ namespace SchoolAPI.Controllers
         [HttpGet("{id}", Name = "GetACourse")]
         public IActionResult GetCourseSectionForCourses(Guid coursesectionID, Guid id)
         {
-            var coursesection = _repository.CourseSection.GetCourseSection(coursesectionID, trackChanges: false);
-            if (coursesection == null)
-            {
-                _logger.LogInfo($"Company with id: {coursesectionID} doesn't exist in the database.");
-                return NotFound();
-            }
+            //var coursesection = _repository.CourseSection.GetCourseSection(coursesectionID, trackChanges: false);
+            //if (coursesection == null)
+            //{
+            //    _logger.LogInfo($"Company with id: {coursesectionID} doesn't exist in the database.");
+            //    return NotFound();
+            //}
 
-            var courseID = _repository.Course.GetCourse(coursesectionID, id, trackChanges: false);
+            var courseID = _repository.Course.GetACourse( id, trackChanges: false);
             if (courseID == null)
             {
                 _logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
@@ -113,14 +113,27 @@ namespace SchoolAPI.Controllers
         }
         /**************************************************************************************/
         [HttpPut("{id}")]
-        [ServiceFilter(typeof(ValidationFilterAttribute))]
-        [ServiceFilter(typeof(ValidateCourseExistsAttribute))]
-        public async Task<IActionResult> UpdateEmployeeForCompany(Guid companyId, Guid id, [FromBody] CourseForUpdateDto employee)
+        public IActionResult UpdateEmployeeForCompany(Guid id, [FromBody] CourseForUpdateDto course)
         {
-            var employeeEntity = HttpContext.Items["employee"] as Courses;
+            if (course == null)
+            {
+                _logger.LogError("CourseSectionUpdateForDto object sent from client is null.");
+                return BadRequest("CourseSectionUpdateForDto object is null");
+            }
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the CourseSectionupdateForDto object");
+                return UnprocessableEntity(ModelState);
+            }
+            var coursesectionEntity = _repository.Course.GetACourse(id, trackChanges: true);
+            if (coursesectionEntity == null)
+            {
+                _logger.LogInfo($"CourseManage with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
 
-            _mapper.Map(employee, employeeEntity);
-            await _repository.SaveAsync();
+            _mapper.Map(course, coursesectionEntity);
+            _repository.Save();
 
             return NoContent();
         }

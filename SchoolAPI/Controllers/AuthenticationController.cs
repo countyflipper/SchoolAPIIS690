@@ -27,7 +27,7 @@ namespace CompanyEmployees.Controllers
             _authManager = authManager;
         }
 
-        [HttpPost(Name = "CourseSectionByID"), Authorize(Roles = "Administrator")]
+        [HttpPost(Name = "Register"), Authorize(Roles = "Administrator")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> RegisterUser([FromBody] UserForRegistrationDto userForRegistration)
         {
