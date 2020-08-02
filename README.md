@@ -19,17 +19,27 @@
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-1BR.PNG)
 #### GET with ID
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-2BR.PNG)
+#### PUT
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-3E.PNG)
+#### PATCH
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-3EPatch.PNG)
+#### ADD
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-4A.PNG)
+#### DELETE
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-5D.PNG)
 
 ### v) BREAD Sections: The user should be able to perform the BREAD operations (as mentioned above) for different sections of the available courses. This page should also check if the relevant course exists or not while adding a section.
+#### GET
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project5-1BR.PNG)
+#### GET with ID
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project5-2BR.PNG)
+#### PUT
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project5-3E.PNG)
+#### PATCH
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project5-4E.PNG)
+#### ADD
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project5-5A.PNG)
+#### DELETE
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project5-6D.PNG)
 
 ### vi) Register for Sections: The user should be able to register for any section of any course. But check for the validity of the registration by checking if that course/section exists or not.
@@ -46,4 +56,5 @@
 
 ### viii) Paging, sorting, filtering, and caching.
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/projectFiltering,searching,sorting.PNG)
+#### CACHING
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/caching.PNG)
