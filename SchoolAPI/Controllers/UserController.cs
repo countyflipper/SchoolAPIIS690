@@ -15,6 +15,7 @@ namespace SchoolAPI.Controllers
 {
     [Route("api/v1/Users")]
     [ApiController]
+    [ResponseCache(CacheProfileName = "120SecondsDuration")]
     [ApiExplorerSettings(GroupName = "v1")]
     public class UserController : ControllerBase
     {
@@ -53,6 +54,7 @@ namespace SchoolAPI.Controllers
 
 
         [HttpGet("{id}", Name = "GetUser")]
+        [ResponseCache(Duration = 60)]
         public async Task<IActionResult> GetUser(Guid id)
         {
 

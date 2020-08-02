@@ -1,4 +1,4 @@
-﻿﻿# Final Project
+﻿# Final Project
 ## Teammembers: Stefan DeRosa and Steven Morales
 
 ### i) User Registration: Any user must be able to register through this page. Details like username, email id, password, first name, last name, phone number etc. should be captured.
@@ -42,5 +42,6 @@
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project7-3.PNG)
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project7-4.PNG)
 
-### viii) Paging, sorting, filtering
+### viii) Paging, sorting, filtering, and cachin.
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/projectFiltering,searching,sorting.PNG)
+![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/caching.PNG)

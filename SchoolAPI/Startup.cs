@@ -13,6 +13,7 @@ using System.IO;
 using SchoolAPI.ActionFilters;
 using Repository.DataShaping;
 using SchoolAPI.Utility;
+using Microsoft.AspNetCore.Mvc;
 
 namespace SchoolAPI
 {
@@ -44,11 +45,16 @@ namespace SchoolAPI
 
             services.AddScoped<ValidateMediaTypeAttribute>();
 
+
+
             services.AddAuthentication();
             services.ConfigureIdentity();
             services.ConfigureJWT(Configuration);
 
             services.AddScoped<IAuthenticationManager, AuthenticationManager>();
+
+            services.ConfigureResponseCaching();
+            services.ConfigureHttpCacheHeaders();
 
             services.Configure<Microsoft.AspNetCore.Mvc.ApiBehaviorOptions>(options => {
                 options.SuppressModelStateInvalidFilter = true;
@@ -58,6 +64,7 @@ namespace SchoolAPI
             {
                 config.RespectBrowserAcceptHeader = true;
                 config.ReturnHttpNotAcceptable = true;
+                config.CacheProfiles.Add("120SecondsDuration", new CacheProfile { Duration = 120 });
             }).AddNewtonsoftJson()
                 .AddXmlDataContractSerializerFormatters()
                 .AddCustomCSVFormatter();
@@ -90,6 +97,9 @@ namespace SchoolAPI
             {
                 ForwardedHeaders = ForwardedHeaders.All
             });
+
+            app.UseResponseCaching();
+            app.UseHttpCacheHeaders();
 
             app.UseRouting();
 
