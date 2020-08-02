@@ -42,5 +42,6 @@
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project7-3.PNG)
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project7-4.PNG)
 
-### viii) Paging, sorting, filtering
+### viii) Paging, sorting, filtering, and caching.
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/projectFiltering,searching,sorting.PNG)
+![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/caching.PNG)
