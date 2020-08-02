@@ -15,7 +15,9 @@
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project3-4.PNG)
 
 ### iv) BREAD Courses: The user should be able to browse, read, edit, add and delete courses (BREAD). You can create separate pages where the user can browse all the available courses, read their description, edit them if required, add new courses and delete old courses.
+#### GET
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-1BR.PNG)
+#### GET with ID
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-2BR.PNG)
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-3E.PNG)
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project4-3EPatch.PNG)
