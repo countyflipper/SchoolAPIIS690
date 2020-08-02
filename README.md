@@ -9,7 +9,7 @@
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project2-2.PNG)
 
 ### iii) Privilege escalation: This page should allow admin rights to the selected user.
-![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project3-1.PNG | width=75)
+![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project3-1.PNG)
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project3-2.PNG)
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project3-3.PNG)
 ![Link to programming running](https://github.com/countyflipper/SchoolAPIIS690/blob/master/SchoolAPI/screenshots/Project3-4.PNG)
